@@ -1,0 +1,48 @@
+
+
+body {
+  background-color: rgb(194, 194, 209);
+}
+
+
+.background-white {
+	height: 95vh;
+	width: 35vw;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 2%;
+
+}
+
+
+.container {
+	border: 1px transparent solid;
+	margin-top: 5em;
+	margin-left: auto;
+	margin-right: auto;
+	height: 80wh;
+	width: 32vw;
+}
+
+.hero-img {
+
+margin-top: 2em;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 0em;
+	display: block;
+	border-radius: 4%;
+}
+
+.title-text {
+  text-align: center;
+  color: rgb(26, 29, 89);
+  font-size: 2.8rem;
+}
+
+.subtitle-text {
+  text-align: center;
+  color: rgb(120, 120, 130);
+  font-size: 1.8rem;
+}
