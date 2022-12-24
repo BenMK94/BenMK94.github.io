@@ -1,43 +1,34 @@
-	<!DOCTYPE html>
-	<html lang="en">
-
-	<head>
-		<meta charset="UTF-8" />
-		<title>Stats Preview Card</title>
-		<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Inter">
-		<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Lexend+Deca">
-		<link rel="stylesheet" href="styles.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	</head>
-
-	<body>
-		<div class="wrapper">
-			<!--text area-->
-			<div class="background">
-				<h1 class="title-text">Get <span class="purple-text">insights</span> that help your business grow.</h1>
-				<p class="title-subtext">Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
-
-				<div class="lower-text left-text">
-					<h2 class="big-numbers">10k+</h2>
-					<p class="subtitle">COMPANIES</p>
-				</div>
-				<div class="lower-text middle-text">
-					<h2 class="big-numbers">314</h2>
-					<p class="subtitle">TEMPLATES</p>
-				</div><div class="lower-text right-text">
-					<h2 class="big-numbers">12M+</h2>
-					<p class="subtitle">QUERIES</p>
-				</div>
-			</div>
-			<!--right image-->
-			<img src="https://i.imgur.com/Zm1lPSv.png" class="splash-image" alt="teamwork-splash">
-				<div src="purple-filter"></div>	
-			</img>
-
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Montserrat:500, 700">
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Fraunces:700">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Frontend Mentor | Product preview card component</title>
+</head>
 
 
-	</html>
+<body>
+  <div class="grid-container">
+
+    <div class="column-a">
+      <img class="splash-pic" alt="Gabrielle Chanel, Paris" src="https://i.imgur.com/JeUAh1N.png"></img>
+      <img class="splash-pic-mobile" alt="Beautiful Cologne" src="https://i.imgur.com/DhQsGuO.png"></img>
+    </div>
+
+    <div class="column-b">
+      <h3 class="text top-text">PERFUME</h3>
+      <h1 class="text title">Gabrielle Essence Eau De Parfum</h1>
+      <p class="text paragraph">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+      <div class="cash-container"><h1 class="text cash-left">$149.99</h1>
+        <p class="cash-right"><strike>$169.99</strike></p></div>
+        <div class="button-container"><button class="button"><img class="icon" src="icon-cart.svg"></img>Add to Cart</button></div>
+      </div>
+    </div>
+
+  </body>
+  </html>
