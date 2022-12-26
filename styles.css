@@ -44,6 +44,7 @@ body {
 
 }
 
+
 .title {
 	font-weight: 700;
 	color: hsl(212, 21%, 14%);
@@ -58,6 +59,7 @@ body {
 	color: hsl(228, 12%, 48%);
 	margin-top: 2.2rem;
 	margin-right: 3rem;
+	text-transform: uppercase;
 }
 
 .paragraph {
