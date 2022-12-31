@@ -1,171 +1,282 @@
-html {
-	font-family: Montserrat, Fraunces;
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
 
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
 body {
-	background: hsl(30, 38%, 92%);
-	display: flex;
-	justify-content: center;
+  height: 100%;
+  font-family: Kumbh Sans;
 }
 
-.grid-container {
-	display: grid;
-	padding-top: 10rem;
-	align-content: center;
-	grid-template-columns: 20rem 20rem;
-	grid-template-areas: 
-	"a b";
-}
-
-.column-a {
-	grid-area: a;
-	grid-column: 1;
-}
-
-.splash-pic {
-	width: 100%;
-	border-radius: 2% 0% 0% 2%;
-	min-height: 100%;
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 
 }
 
-.column-b {
-	grid-area: b;
-	grid-column: 2;
-	background-color: white;
-	border-radius: 0% 2% 2% 0%;
-	height: 100%;
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
 }
 
-.column-b .text {
-	text-align: left;
-	margin-left: 2rem;
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
 
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
 }
 
 
-.title {
-	font-weight: 700;
-	color: hsl(212, 21%, 14%);
-	margin-right: 4rem;
-	font-family: Fraunces;
+:root {
+  --dark-desaturated-blue-text: hsl(238, 29%, 16%);
+  --soft-red-text: hsl(14, 88%, 65%);
+  --dark-greyish-blue-text: hsl(240, 6%, 50%);
+  --darker-greyish-blue-text: hsl(237, 12%, 33%);
 }
 
-.top-text {
-	letter-spacing: 0.375rem;
-	font-size: 0.75rem;
-	font-weight: 500;
-	color: hsl(228, 12%, 48%);
-	margin-top: 2.2rem;
-	margin-right: 3rem;
-	text-transform: uppercase;
+.faq {
+  padding: 1.2rem;
+  margin-top: 2.1rem;
 }
 
-.paragraph {
-	color: hsl(228, 12%, 48%);
-	font-size: 14px;
-	margin-top: 1.4rem;
-	margin-right: 3rem;
-	font-weight: 500;
-	line-height: 1.5em;
+hr {
+  width: 78%;
+  background: hsl(240, 5%, 91%);
+  height: 1px;
+  border: none;
+  margin-left: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+.accordion {
+  background-color: transparent;
+  font-family: Kumbh Sans;
+  color: var(--darker-greyish-blue-text);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: block;
+  padding-top: 1.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  width: 100%;
+  text-align: left;
+}
+
+.accordion:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.panel {
+  padding: 0 18px;
+  padding-left: 1.2rem;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  max-width: 85%;
+  transition: max-height 0.2s ease-out;
+}
+
+.panel-text {
+  font-size: 0.8rem;
+  color: hsl(240, 6%, 50%);
+}
+
+.main-container {
+  display: grid;
+  position: relative;
+  background-color: white;
+  width: 58rem;
+  height: 30rem;
+  border-radius: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "a b";
+  -webkit-box-shadow: 0px 15px 23px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 15px 23px 0px rgba(0, 0, 0, 0.3);
+}
+
+.left-container {
+  grid-area: a;
+  position: relative;
+  overflow: hidden;
+}
+
+.right-container {
+  grid-area: b;
+}
+
+.background-image {
+  position: absolute;
+  left: -124%;
+  top: -60%;
 
 }
 
-.cash-left {
-	display: inline-flex;
-	color: hsl(158, 36%, 37%);
-	font-family: Fraunces;
-	font-weight: 500;
+.background-mobile {
+  display: none;
 }
 
-.cash-container {
-	display: flex;
+.woman {
+  position: absolute;
+  top: 4rem;
+  left: -5.1rem;
 }
 
-.cash-right {
-	display: inline-flex;
-	color: hsl(228, 12%, 48%);
-	font-size: 14px;
-	flex-direction: column;
-	justify-content: center;
-	margin-left: 1rem;
+.woman-mobile {
+  display: none;
 }
 
-.button-container {
-	display: flex;
-	justify-content: center;
+.box {
+  position: absolute;
+  z-index: 3;
+  top: 40%;
+  left: -5.8rem;
 }
 
-.button {
-	display: flex;
-	background-color: hsl(158, 36%, 37%);
-	color: white;
-	border: none;
-	padding: 1.1rem 4.6rem;
-	text-align: center;
-	text-decoration: none;
-	font-size: 14px;
-	border-radius: 10px;
-	font-family: Montserrat;
-	font-weight: 500;
-	cursor: pointer;
-	justify-content: center;
+.down-arrow {
+  display: inline;
+  float: right;
+  margin-right: 6rem;
+  padding-top: 0.5rem;
 }
 
-.button:hover {
-	background-color: #1c3b1d;
+.active {
+  font-weight: 700;
 }
 
-.icon {
-	margin: 0 0.5em 0 0;
+.active .down-arrow {
+  transform: rotate(180deg);
 }
-
-.splash-pic-mobile {
-	display: none;
-}
-
 
 @media only screen and (max-width: 600px) {
 
-	.splash-pic {
-		display: none;
-	}
+  .main-container {
 
-	.splash-pic-mobile {
-		display: block;
-		border-radius: 2% 2% 0% 0%;
-		width: 100%;
-		min-height: 100%;
-	}
+    width: 80vw;
+    height: 70vh;
+    border-radius: 1.5em;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    grid-template-areas:
+      "a"
+      "b";
+  }
 
-	.grid-container {
-		display: grid;
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-		align-content: center;
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr 1fr;
-		grid-template-areas: 
-		"a"
-		"b";
-	}
+  .box {
+    display: none;
+  }
 
-	.column-b {
-		grid-area: b;
-		border-radius: 0% 0% 2% 2%;
-	}
+  .background-image {
+    display: none;
+  }
 
-	.cash-left {
-		margin: 0 0 0 0;
-	}
+  .left-container {
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+  }
 
-	.button {
-		margin: 0.5rem 0 2rem 0;
-	}
+  .right-container {
+    padding-top: 0em;
+  }
 
-	.title {
-		margin: 0.5rem 0 1rem 0;
-	}
+  .woman {
+    display: none;
+  }
+
+  .box {
+    position: absolute;
+    z-index: 3;
+    top: -7%;
+    left: 6%;
+    max-width: 30%;
+  }
+
+  .faq {
+    text-align: center;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .accordion {
+    font-size: 0.75em;
+  }
+
+  .woman-mobile {
+    display: block;
+    position: absolute;
+    max-width: 80%;
+    top: -63%
+  }
+
+  .background-mobile {
+    display: block;
+    position: absolute;
+  }
+
+  .background-image {
+    display: none;
+
+  }
+
+  .down-arrow {
+    margin-right: 2em;
+  }
 
 }
