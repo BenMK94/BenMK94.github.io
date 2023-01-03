@@ -5,80 +5,95 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh Sans:400,700">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | FAQ Accordion Card</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
+  <title>Frontend Mentor | News homepage</title>
 </head>
 
 <body>
-  <main>
-    <div class="main-container">
-      <img class="box" src="illustration-box-desktop.svg" alt="a hovering orange box"></img>
-      <div class="right-container">
-        <h1 class="faq">FAQ</h1>
 
-        <button class="accordion">How many team members can I invite? <img src="icon-arrow-down.svg" class="down-arrow"
-            alt="tiny navigational arrow"></button>
-        <div class="panel">
-          <p class="panel-text">You can invite up to 2 additional users on the Free plan. There is no limit on
-            team members for the Premium plan.</p>
-        </div>
+  <div class="main-container">
+    <div class="logo-and-nav">
+      <img class="logo" src="logo.svg" alt="our company's logo: a big W."></img>
 
-        <hr>
-
-        <button class="accordion">What is the maximum file upload size? <img src="icon-arrow-down.svg"
-            class="down-arrow" alt="tiny navigational arrow"></img></button>
-        <div class="panel">
-          <p class="panel-text">No more than 2GB. All files in your account must fit your allotted storage space.</p>
-        </div>
-
-        <hr>
-
-        <button class="accordion">How do I reset my password? <img src="icon-arrow-down.svg" class="down-arrow"
-            alt="tiny navigational arrow"></button>
-        <div class="panel">
-          <p class="panel-text">Click “Forgot password” from the login page or “Change password” from your profile
-            page.A reset link will be emailed to you.</p>
-        </div>
-
-        <hr>
-
-        <button class="accordion">Can I cancel my subscription? <img src="icon-arrow-down.svg" class="down-arrow"
-            alt="tiny navigational arrow"></button>
-        <div class="panel">
-          <p class="panel-text">Yes! Send us a message and we’ll process your request no questions asked.</p>
-        </div>
-
-        <hr>
-
-        <button class="accordion">Do you provide additional support? <img src="icon-arrow-down.svg" class="down-arrow"
-            alt="tiny navigational arrow"></button>
-        <div class="panel">
-          <p class="panel-text">Chat and email support is available 24/7. Phone lines are open during normal business
-            hours.</p>
-        </div>
-
-        <hr>
-
-      </div>
-
-      <script src="main.js"></script>
-
-      <div class="left-container">
-        <img class="background-image" src="bg-pattern-desktop.svg" alt="background squiggles"></img>
-        <img class="background-mobile" src="bg-pattern-mobile.svg" alt="background shadow"></img>
-        <img class="woman" src="illustration-woman-online-desktop.svg" alt="a woman interfaces with some symbols"></img>
-        <img class="woman-mobile" src="illustration-woman-online-mobile.svg"
-          alt="a woman interfaces with some symbols, but this time on mobile"></img>
-      </div>
+      <ul class="nav-bar">
+        <li><a class="nav-text" href="#home">Home</a></li>
+        <li><a class="nav-text" href="#new">New</a></li>
+        <li><a class="nav-text" href="#popular">Popular</a></li>
+        <li><a class="nav-text" href="#trending">Trending</a></li>
+        <li><a class="nav-text" href="#categories">Categories</a></li>
+      </ul>
     </div>
 
 
+    <div class="main-grid">
+      <img src="image-web-3-desktop.jpg" class="desktop-image" alt="colourful shapes"></img>
+      <img src="image-web-3-mobile.jpg" class="mobile-image" alt="colourful shapes"></img>
+      <h1 class="bold-title">The Bright Future of Web 3.0?</h1>
 
-  </main>
+      <div class="button-and-text-container">
+        <p class="button-paragraph">We dive into the next evolution of the web that claims to put the power of the
+          platforms back into the hands
+          of the people. But is it really fulfilling its promise?</p>
+        <button class="button">read more</button>
+
+      </div>
+
+
+      <!-- Right Stuff -->
+
+      <div class="right-text-container">
+        <h2>New</h2>
+
+        <h4 class="black-box-titles"><a class="clickable">Hydrogen VS Electric Cars</a></h4>
+        <p class="black-box-text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        <hr>
+        </hr>
+
+        <h4 class="black-box-titles"><a class="clickable">The Downsides of AI Artistry</a></h4>
+        <p class="black-box-text">What are the possible adverse effects of on-demand AI image generation?</p>
+        <hr>
+        </hr>
+
+        <h4 class="black-box-titles"><a class="clickable">Is VC Funding Drying Up?</a></h4>
+        <p class="black-box-text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+
+      </div>
+
+
+      <!-- Bottom Stuff -->
+
+      <div class="left-column column">
+        <img src="image-retro-pcs.jpg" class="thumb" alt="retro PCs glow blue and purple"></img>
+        <div class="bottom-text-wrapper">
+          <h3 class="numbers">01</h3>
+          <p class="bold-bottom"><a class="clickable">Reviving Retro PCs</a></p>
+          <p class="regular-text">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+
+      <div class="middle-column column">
+        <img src="image-top-laptops.jpg" class="thumb" alt="a glowing, futuristic keyboard"></img>
+        <div class="bottom-text-wrapper">
+          <h3 class="numbers">02</h3>
+          <p class="bold-bottom"><a class="clickable">Top 10 Laptops of 2022</a></p>
+          <p class="regular-text">Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+
+      <div class="right-column column">
+        <img src="image-gaming-growth.jpg" class="thumb" alt="a console controller falls into a person's palm"></img>
+        <div class="bottom-text-wrapper">
+          <h3 class="numbers">03</h3>
+          <p class="bold-bottom"><a class="clickable">The Growth of Gaming</a></p>
+          <p class="regular-text">How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </body>
+
 
 </html>
