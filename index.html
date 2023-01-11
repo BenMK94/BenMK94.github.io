@@ -14,16 +14,20 @@
 <body>
 
   <div class="main-container">
-    <div class="logo-and-nav">
-      <img class="logo" src="logo.svg" alt="our company's logo: a big W."></img>
 
-      <ul class="nav-bar">
-        <li><a class="nav-text" href="#home">Home</a></li>
-        <li><a class="nav-text" href="#new">New</a></li>
-        <li><a class="nav-text" href="#popular">Popular</a></li>
-        <li><a class="nav-text" href="#trending">Trending</a></li>
-        <li><a class="nav-text" href="#categories">Categories</a></li>
-      </ul>
+    <img class="logo" src="logo.svg" alt="our company's logo: a big W."></img>
+
+    <ul class="nav-bar">
+      <li><a class="nav-text" href="#home">Home</a></li>
+      <li><a class="nav-text" href="#new">New</a></li>
+      <li><a class="nav-text" href="#popular">Popular</a></li>
+      <li><a class="nav-text" href="#trending">Trending</a></li>
+      <li><a class="nav-text" href="#categories">Categories</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
     </div>
 
 
@@ -34,8 +38,7 @@
 
       <div class="button-and-text-container">
         <p class="button-paragraph">We dive into the next evolution of the web that claims to put the power of the
-          platforms back into the hands
-          of the people. But is it really fulfilling its promise?</p>
+          platforms back into the hands of the people. But is it really fulfilling its promise?</p>
         <button class="button">read more</button>
 
       </div>
@@ -93,6 +96,22 @@
 
     </div>
   </div>
+
+  <script>
+
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-bar");
+
+
+    hamburger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+
+    }
+
+  </script>
 </body>
 
 
